@@ -1,5 +1,5 @@
 
-Desarrollo de Trabajo Practico N°4
+Desarrollo de Trabajo Practico Integral
 
 1. Flores Ricardo Julián - usuario:RicardoJulianFlores
 2. Duran Josue Alejandro - usuario:josuedurann
