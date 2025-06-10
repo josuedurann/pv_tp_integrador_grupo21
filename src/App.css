@@ -1,42 +1,118 @@
 #root {
-  max-width: 1280px;
+  max-width: 1683px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container{
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lista{
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.card{
+  border-radius: 10px;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
 }
 
-.card {
-  padding: 2em;
+.card img{
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.card h3{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card p{
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card label{
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.card input{
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0.5rem 0;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+}
+
+.formulario-card {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.formulario-card input,
+.formulario-card textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.formulario-card textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formulario-card button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-card button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.precio{
+  color: #007600;
+}
+
+.botones{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
