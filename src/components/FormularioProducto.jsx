@@ -1,0 +1,61 @@
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, useNavigate } from 'react-router-dom';
+import { actualizarProducto, setProductos } from '../redux/prodSlice';
+
+function FormularioProducto() {
+  const { id } = useParams();
+  const productos = useSelector((state) => state.productos);
+  const productoExistente = productos.find((p) => p.id === parseInt(id));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const [producto, setProducto] = useState({
+    title: "",
+    price: "",
+    description: "",
+    category: "",
+    image: "",
+  });
+
+  useEffect(() => {
+    if (productoExistente) {
+      setProducto(productoExistente);
+    }
+  }, [productoExistente]);
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setProducto((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (productoExistente) {
+      dispatch(actualizarProducto({ ...productoExistente, ...producto }));
+      navigate(-1);
+    } else {
+      const idNuevo = productos.length !== 0 ? Math.max(...productos.map((a) => a.id)) + 1 : 1;
+      dispatch(setProductos([...productos, { ...producto, id: idNuevo }]));
+      navigate("/");
+    }
+    
+  };
+
+  return (
+    <div className="formulario-page">
+      <h1>{productoExistente ? "Editar Producto" : "Crear Producto"}</h1>
+      <form onSubmit={onSubmit} className="formulario-card">
+        <label>Título</label><input name="title" value={producto.title} onChange={onChange} required />
+        <label>Precio</label><input name="price" value={producto.price} onChange={onChange} required type="number" />
+        <label>Categoría</label><input name="category" value={producto.category} onChange={onChange} required />
+        <label>URL de Imagen</label><input name="image" value={producto.image} onChange={onChange} required />
+        <label>Descripción</label><textarea name="description" value={producto.description} onChange={onChange} required />
+        <button type="submit">{productoExistente ? "Guardar cambios" : "Agregar producto"}</button>
+      </form>
+    </div>
+  );
+}
+
+export default FormularioProducto;
