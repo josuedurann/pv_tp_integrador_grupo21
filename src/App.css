@@ -110,9 +110,3 @@
 .precio{
   color: #007600;
 }
-
-.botones{
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
