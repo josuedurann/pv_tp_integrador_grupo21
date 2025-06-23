@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Layout general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de productos */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 5px;
+}
+
+.card .category {
+  font-size: 0.8rem;
+  background-color: #eef;
+  color: #336;
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Favoritos */
+.favorite {
+  color: red;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.favorite.inactive {
+  color: #ccc;
+}
+
+/* Formulario */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
