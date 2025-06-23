@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { actualizarProducto, setProductos } from '../redux/prodSlice';
+import TextField from '@mui/material/TextField';
 
 function FormularioProducto() {
   const { id } = useParams();
