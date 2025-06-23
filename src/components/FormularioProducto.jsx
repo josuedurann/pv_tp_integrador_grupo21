@@ -37,7 +37,7 @@ function FormularioProducto() {
       navigate(-1);
     } else {
       const idNuevo = productos.length !== 0 ? Math.max(...productos.map((a) => a.id)) + 1 : 1;
-      dispatch(setProductos([...productos, { ...producto, id: idNuevo }]));
+      dispatch(setProductos([...productos, { ...producto, id: idNuevo , rating: { rate: 0, count: 0 }}]));
       navigate("/");
     }
     
