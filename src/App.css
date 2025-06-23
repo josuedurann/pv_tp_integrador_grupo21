@@ -26,7 +26,7 @@
   color: #333;
 }
 
-.card img{
+.imagen-producto{
   width: 100%;
   height: 100px;
   object-fit: contain;
@@ -109,4 +109,8 @@
 
 .precio{
   color: #007600;
+}
+
+.imagensection img{
+  max-width: 280px;
 }
