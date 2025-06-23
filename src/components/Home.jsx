@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { clickFavorito } from "../redux/favSlice";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const Home = () => {
   const productos = useSelector((state) => state.productos);
@@ -41,11 +42,7 @@ const Home = () => {
           ))
         )}
         <div className="card add-card">
-          <img
-            src="/src/assets/icono-mas.png"
-            alt="Agregar nuevo producto"
-            className="icono-mas"
-          />
+          <AddCircleIcon sx={{ fontSize: 120 }}/>
           <Link to="/formulario">
             <button className="btn-agregar">Agregar Producto</button>
           </Link>
