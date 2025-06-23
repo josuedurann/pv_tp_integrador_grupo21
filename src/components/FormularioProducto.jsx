@@ -44,15 +44,19 @@ function FormularioProducto() {
     
   };
 
+  const blanco = {
+    inputLabel: {style: {color: 'white'}}
+  }
+
   return (
     <div className="formulario-page">
       <h1>{productoExistente ? "Editar Producto" : "Crear Producto"}</h1>
       <form onSubmit={onSubmit} className="formulario-card">
-        <TextField label="Título" name="title" value={producto.title} onChange={onChange} required />
-        <TextField label="Precio" name="price" value={producto.price} onChange={onChange} required type="number" />
-        <TextField label="Categoría" name="category" value={producto.category} onChange={onChange} required />
-        <TextField label="Imagen" name="image" value={producto.image} onChange={onChange} required />
-        <TextField label="Descripción" multiline name="description" value={producto.description} onChange={onChange} required />
+        <TextField slotProps={blanco} label="Título" name="title" value={producto.title} onChange={onChange} required />
+        <TextField slotProps={blanco} label="Precio" name="price" value={producto.price} onChange={onChange} required type="number" />
+        <TextField slotProps={blanco} label="Categoría" name="category" value={producto.category} onChange={onChange} required />
+        <TextField slotProps={blanco} label="Imagen" name="image" value={producto.image} onChange={onChange} required/>
+        <TextField slotProps={blanco} label="Descripción" name="description" value={producto.description} onChange={onChange} required multiline/>
         <button type="submit">{productoExistente ? "Guardar cambios" : "Agregar producto"}</button>
       </form>
     </div>

@@ -5,19 +5,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
 
-/* Layout general */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* Tarjetas de productos */
 .card {
@@ -34,21 +23,12 @@ body {
   transform: scale(1.02);
 }
 
-.card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
 .card h3 {
   margin-top: 10px;
   font-size: 1.2rem;
   color: #222;
 }
 
-.card p {
-  font-size: 0.95rem;
-  color: #666;
-}
 
 .card .price {
   font-weight: bold;
@@ -124,15 +104,6 @@ body {
   font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
 
 .error {
   color: red;

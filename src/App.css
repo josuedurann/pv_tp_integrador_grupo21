@@ -66,29 +66,19 @@
   background-color: #1e1e1e;
   padding: 2rem;
   border-radius: 20px;
-  width: 100%;
-  max-width: 400px;
+  width: 500px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   margin: 0 auto;
   display: flex;
 }
 
 .formulario-card input,
-.formulario-card textarea {
+.formulario-card textarea{
   background-color: #333;
   color: #fff;
-  border: 1px solid #555;
-  border-radius: 20px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  outline: none;
-}
-
-.formulario-card textarea {
-  resize: vertical;
-  min-height: 80px;
+  border-radius: 10px;
 }
 
 .formulario-card button {
