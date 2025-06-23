@@ -47,7 +47,7 @@ function FormularioProducto() {
     <div className="formulario-page">
       <h1>{productoExistente ? "Editar Producto" : "Crear Producto"}</h1>
       <form onSubmit={onSubmit} className="formulario-card">
-        <label>Título</label><input name="title" value={producto.title} onChange={onChange} required />
+        <TectField label="Título" name="title" value={producto.title} onChange={onChange} required />
         <label>Precio</label><input name="price" value={producto.price} onChange={onChange} required type="number" />
         <label>Categoría</label><input name="category" value={producto.category} onChange={onChange} required />
         <label>URL de Imagen</label><input name="image" value={producto.image} onChange={onChange} required />
