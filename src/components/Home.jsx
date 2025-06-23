@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { clickFavorito } from "../redux/favSlice";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import Rating from '@mui/material/Rating';
 
 const Home = () => {
   const productos = useSelector((state) => state.productos);
@@ -25,6 +26,9 @@ const Home = () => {
               />
               <h3>{producto.title}</h3>
               <p className="precio">${producto.price}</p>
+
+              <Rating value={producto.rating.rate} precision={0.1} readOnly />
+
               <p>Categoría: {producto.category}</p>
 
               <button

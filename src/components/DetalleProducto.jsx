@@ -26,22 +26,22 @@ function DetalleProducto() {
   };
 
   return (
-    <div className="productolayout">
-        <div className="imagensection">
-          <img
-            src={productoActual.image}
-            alt={productoActual.title}
-            className="productoimagen"
-          />
-        </div>
-        
+    <div className="card">
         <div className="infosection">
           <div className="productoheader">
             <h1 className="productotitulo">{productoActual.title}</h1>
             <span className="productocategoria">{productoActual.category}</span>
           </div>
-          
-          <div className="preciocontainer">
+
+          <div className="imagensection">
+            <img
+              src={productoActual.image}
+              alt={productoActual.title}
+              className="productoimagen"
+            />
+          </div>
+
+          <div className="precio">
             <span className="preciovalor">${productoActual.price}</span>
           </div>
           
@@ -54,7 +54,7 @@ function DetalleProducto() {
             <span className="stockcantidad">{productoActual.rating.count} unidades</span>
           </div>
           
-          <div className="acciones-container">
+          <div className="botones">
             <button
               onClick={() => dispatch(clickFavorito(productoActual.id))}
               className={`botonfavorito ${esProductoFavorito ? 'favoritoactivo' : 'favoritoinactivo'}`}
