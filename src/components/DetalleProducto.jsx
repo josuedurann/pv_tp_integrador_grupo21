@@ -22,7 +22,7 @@ function DetalleProducto() {
   const eliminarProducto = () => {
     const productosActualizados = productos.filter((item) => item.id !== productoActual.id);
     dispatch(setProductos(productosActualizados));
-    navigate('/productos');
+    navigate(-1);
   };
 
   return (

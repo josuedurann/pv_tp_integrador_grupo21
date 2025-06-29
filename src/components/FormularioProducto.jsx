@@ -33,6 +33,8 @@ function FormularioProducto() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if(producto.price <= 0) 
+      return alert("El precio de producto debe ser mayor a 0");
     if (productoExistente) {
       dispatch(actualizarProducto({ ...productoExistente, ...producto }));
       navigate(-1);
