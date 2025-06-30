@@ -1,15 +1,15 @@
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { clickFavorito } from "../redux/favSlice";
+import { useSelector, useDispatch } from "react-redux";// Importamos los hooks necesarios de react-redux para acceder al estado global y despachar acciones
+import { Link } from "react-router-dom";// Importamos Link para la navegación entre rutas sin recargar la página
+import { clickFavorito } from "../redux/favSlice";// Importamos la acción que permite marcar o desmarcar un producto como favorito
 
-const Favoritos = () => {
-  const productos = useSelector((state) => state.productos);
-  const favoritos = useSelector((state) => state.favoritos);
-  const dispatch = useDispatch();
-  const productosFavoritos = productos.filter((p) =>
+const Favoritos = () => {// Componente funcional Favoritos
+  const productos = useSelector((state) => state.productos); // Obtenemos la lista completa de productos desde el estado global
+  const favoritos = useSelector((state) => state.favoritos);  // Obtenemos la lista de IDs de productos marcados como favoritos
+  const dispatch = useDispatch();  // Hook para despachar acciones a Redux
+  const productosFavoritos = productos.filter((p) =>   // Filtramos los productos para quedarnos solo con los que están en la lista de favoritos
     favoritos.includes(p.id)
   );
-  if (productosFavoritos.length === 0) {
+  if (productosFavoritos.length === 0) { // Si no hay productos favoritos, mostramos un mensaje y un botón para volver al inicio
     return (
       <div className="container">
         <h1>Productos Favoritos</h1>
@@ -20,7 +20,7 @@ const Favoritos = () => {
       </div>
     );
   }
-  return (
+  return (  // Si hay productos favoritos, los mostramos en una lista de tarjetas
     <div className="container">
       <h1>Productos Favoritos</h1>
       <div className="lista">
@@ -51,4 +51,5 @@ const Favoritos = () => {
     </div>
   );
 };
-export default Favoritos;
+export default Favoritos;// Exportamos el componente para poder usarlo en otras partes de la aplicación
+
