@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit"; // función configureStore, que se usa para crear el store global
 import prodsReducer from "./prodSlice";
 import favReducer from "./favSlice";
 import userReducer from "./userSlice";
